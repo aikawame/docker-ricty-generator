@@ -13,5 +13,13 @@ if [ $? -ne 0 ]; then
   exit 0
 fi
 
+echo 'Revise character spacing' 1>&2
+for font in Ricty*.ttf; do
+  ttx -t OS/2 $font 1>&2
+  sed -i -e "s/xAvgCharWidth value=\".*\"/xAvgCharWidth value=\"500\"/" ${font%.ttf}.ttx 1>&2
+  mv $font $font.bak
+  ttx -m $font.bak ${font%.ttf}.ttx 1>&2
+done
+
 echo 'Compress font fils' 1>&2
 find . -name "Ricty*.ttf" | xargs zip -
