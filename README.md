@@ -11,8 +11,12 @@ docker run [--rm] aikawame/ricty-generator [options] auto > ricty.zip
 生成されたフォントはZIPアーカイブとして標準出力されます。  
 カレントディレクトリーなどにリダイレクトしてファイルを受け取ってください。
 
-## オプション
+オプションは公式の生成スクリプトと同様に利用できます。
 
-公式の生成スクリプトと同じオプションを利用できます。
+## ライセンス
+
+生成されたフォントのライセンスについては[公式サイト](https://rictyfonts.github.io/)をご確認ください。
+
+## Ricty 公式サイト
 
 https://rictyfonts.github.io/
