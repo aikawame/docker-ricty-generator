@@ -1,5 +1,11 @@
 #!/bin/bash
 
+getopt -q fvlnwWZzasd $@ > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+  ricty_generator $@ 1>&2
+  exit 0
+fi
+
 wget -nc https://github.com/google/fonts/raw/master/ofl/inconsolata/static/Inconsolata-Regular.ttf
 wget -nc https://github.com/google/fonts/raw/master/ofl/inconsolata/static/Inconsolata-Bold.ttf
 
@@ -7,11 +13,6 @@ wget -nc https://osdn.net/projects/mix-mplus-ipa/downloads/72511/migu-1m-2020030
 unzip -u -j migu-1m.zip 1>&2
 
 ricty_generator $@ 1>&2
-
-ls Ricty*.ttf > /dev/null 2>&1
-if [ $? -ne 0 ]; then
-  exit 0
-fi
 
 echo 'Revise character spacing' 1>&2
 for font in Ricty*.ttf; do
