@@ -6,8 +6,8 @@ if [ $? -ne 0 ]; then
   exit 0
 fi
 
-wget -nc https://github.com/google/fonts/raw/master/ofl/inconsolata/static/Inconsolata-Regular.ttf
-wget -nc https://github.com/google/fonts/raw/master/ofl/inconsolata/static/Inconsolata-Bold.ttf
+wget -nc https://github.com/google/fonts/raw/main/ofl/inconsolata/static/Inconsolata-Regular.ttf
+wget -nc https://github.com/google/fonts/raw/main/ofl/inconsolata/static/Inconsolata-Bold.ttf
 
 wget -nc https://osdn.net/projects/mix-mplus-ipa/downloads/72511/migu-1m-20200307.zip -O migu-1m.zip
 unzip -u -j migu-1m.zip 1>&2
