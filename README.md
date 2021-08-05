@@ -5,7 +5,7 @@
 ## 使用方法
 
 ```
-docker run [--rm] aikawame/ricty-generator [options] auto > ricty.zip
+docker run [--rm] ghcr.io/aikawame/ricty-generator [options] auto > ricty.zip
 ```
 
 生成されたフォントはZIPアーカイブとして標準出力されます。  
